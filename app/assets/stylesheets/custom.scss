@@ -96,15 +96,6 @@ aside {
   }
 }
 
-.gravatar {
-  float: left;
-  margin-right: 10px;
-}
-
-.gravatar_edit {
-  margin-top: 15px;
-}
-
 /* forms */
 
 input, textarea, select, .uneditable-input {
@@ -129,6 +120,7 @@ input {
 .field_with_errors {
   @extend .has-error;
   .form-control {
+    
     color: $state-danger-text;
   }
 }
@@ -158,6 +150,9 @@ input {
     color: $gray-light;
     display: block;
     margin-left: 60px;
+  }
+  .detail {
+    padding-left: 10px;
   }
 }
 

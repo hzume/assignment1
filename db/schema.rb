@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200420145004) do
+ActiveRecord::Schema.define(version: 20200420145045) do
 
   create_table "microposts", force: :cascade do |t|
     t.text "content"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20200420145004) do
     t.integer "month"
     t.integer "date"
     t.string "theater"
+    t.integer "rating"
     t.index ["user_id", "created_at"], name: "index_microposts_on_user_id_and_created_at"
     t.index ["user_id"], name: "index_microposts_on_user_id"
   end

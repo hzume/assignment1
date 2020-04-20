@@ -1,6 +1,6 @@
 <%= form_for(@micropost) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
-  <%= f.hidden_field :value, id: :movie_rating %>
+  <%= f.hidden_field :rating, id: :movie_rating %>
   <div class="field">
     <div id='star-rating'></div>
     <%= f.label :title %>

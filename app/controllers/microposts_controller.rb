@@ -17,6 +17,6 @@ class MicropostsController < ApplicationController
   private
 
     def micropost_params
-      params.require(:micropost).permit(:content, :title, :year, :month, :date, :theater)
+      params.require(:micropost).permit(:content, :title, :year, :month, :date, :theater, :rating)
     end
 end

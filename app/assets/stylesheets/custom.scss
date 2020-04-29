@@ -105,6 +105,10 @@ input, textarea, select, .uneditable-input {
   
 }
 
+.field {
+  padding-top: 10px;
+}
+
 input {
   height: auto !important;
 }
@@ -134,13 +138,15 @@ input {
     padding: 10px 0;
     border-top: 1px solid #e8e8e8;
   }
+  .title {
+  }
   .user {
     margin-top: 5em;
     padding-top: 0;
   }
   .content {
     display: block;
-    margin-left: 60px;
+    margin-left: 20px;
     img {
       display: block;
       padding: 5px 0;
@@ -149,7 +155,6 @@ input {
   .timestamp {
     color: $gray-light;
     display: block;
-    margin-left: 60px;
   }
   .detail {
     padding-left: 10px;

@@ -1,8 +1,19 @@
-<%= form_for(@micropost) do |f| %>
+<%= form_for @micropost do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
-  <%= f.hidden_field :rating, id: :movie_rating %>
+  
+    <%= f.label :rating %>
+    <%= f.hidden_field :rating, id: :micropost_rating %>     
+    <div id="star"></div>
+    <script>
+    $('#star').raty({
+      path:  '/images/',
+      click: function(score, e) {
+        $("#micropost_rating").val(score)
+      }
+    });
+    </script>
+
   <div class="field">
-    <div id='star-rating'></div>
     <%= f.label :title %>
     <%= f.text_field :title, class: 'form-control' %>
     
@@ -16,19 +27,10 @@
     
     <%= f.label :theater %>
     <%= f.text_field :theater, class: 'form-control' %>
-    
+
     <%= f.label :comment %>
     <%= f.text_area :content %>
   </div>
   <%= f.submit "Post", class: "btn btn-primary" %>
 <% end %>
 
-<script>
-$('#star-rating').raty({
-path: '/images/',
-click: function(score, e) {
-$("#movie_rating").val(score)
-}
-});
-
-</script>

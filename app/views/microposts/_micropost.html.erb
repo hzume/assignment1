@@ -1,6 +1,16 @@
 <li id="micropost-<%= micropost.id %>">
-  <span class="title"><%= micropost.title %></span>
+  <span class="title">Title: <%= micropost.title %></span>
+  
   <span class="detail">[ <%= micropost.year %>/<%= micropost.month %>/<%= micropost.date %> at <%= micropost.theater %> ]</span>
+  
+  <span class="star"><div id="star-<%= micropost.id %>"></div></span>
+  <script>
+  $("#star-<%= micropost.id %>").raty({
+    score: '<%= micropost.rating %>',
+    path: '/images/',
+    readOnly: true,
+  });
+  </script>
   
   <span class="content"><%= micropost.content %></span>
   

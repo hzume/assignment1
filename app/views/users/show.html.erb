@@ -23,6 +23,8 @@
         <%= render @microposts %>
       </ol>
       <%= will_paginate @microposts %>
+    <% else %>
+      <h3>No reviews</h3>
     <% end %>
   </div>
 </div>

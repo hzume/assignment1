@@ -8,6 +8,12 @@
       </h1>
     </section>
   </aside>
+  <%= form_tag(users_path, :method => "get") do %>
+    <%= text_field_tag :search, params[:search] %>
+    <%= hidden_field_tag :id, params[:id] %>
+    <%= submit_tag 'Search', :name => nil %>
+  <% end %>
+
   <div class="col-md-8">
     <% if @user.microposts.any? %>
       <h3>Reviews (<%= @user.microposts.count %>)</h3>

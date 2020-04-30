@@ -1,9 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  content: MyText
-  user: one
-
-two:
-  content: MyText
-  user: two
+<% 30.times do |n| %>
+micropost_<%= n %>:
+  title: "aaaa"
+  content: "wawaa"
+  created_at: <%= 42.days.ago %>
+  year: 2000
+  month: 11
+  date: 19
+  rating: 3
+  user: hogehoge
+<% end %>

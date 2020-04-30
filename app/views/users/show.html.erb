@@ -8,10 +8,12 @@
       </h1>
     </section>
   </aside>
-  <%= form_tag(users_path, :method => "get") do %>
-    <%= text_field_tag :search, params[:search] %>
-    <%= hidden_field_tag :id, params[:id] %>
-    <%= submit_tag 'Search', :name => nil %>
+  <% if @user.microposts.any? %>
+    <%= form_tag(users_path, :method => "get") do %>
+      <%= text_field_tag :search, params[:search] %>
+      <%= hidden_field_tag :id, params[:id] %>
+      <%= submit_tag 'Search', :name => nil %>
+    <% end %>
   <% end %>
 
   <div class="col-md-8">
